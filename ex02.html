@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*	
+	var num='1111'
+		document.write(num == 1111)
+		document.write(num == "1111") //값만 비교한다.
+		document.write(num === 1111)
+		document.write(num === "1111") //타입도 비교한다.
+	 */
+</script>
+<script type="text/javascript">
+	var kor01 = 500 //전역변수
+	
+	function getGrade(name) {
+		//var kor = 100 // var를 선언하지 않으면 전역변수 처럼 작동한다.
+		//var kor = 100 
+		//let kor = 100 //한번 정의하면 다시 정의 불가
+		const kor = 100 //fainer과 같음
+		document.write(kor + "<br>")
+		//let kor = 123 
+		document.write(kor + "<br>")
+		return name
+	}
+	kor01 = getGrade("안녕하세요")
+	document.write(kor01 + "<br>")
+	
+	function test(a,b,c,d){
+		//alert('test 호출')
+		//document.write(a+":"+b+":"+c+":"+d)
+		document.write(arguments.length) //넘겨준 값의 개 수
+		for(i=0; i<arguments.length; i++){
+			document.write(arguments[i]+"<br>")
+		}
+		if(c == undefined){
+			//alert("c값없음")
+		}
+	}
+</script>
+
+</head>
+<body>
+	
+	<button type="button" onclick="test('홍길동',20,1,1,1)">클릭</button>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

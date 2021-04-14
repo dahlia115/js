@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function test(){
+		n = document.getElementById("n1").value
+		if(n==""){
+			//alert('n2는 필수항목 입니다.')
+		}
+		n = document.getElementById("n1").value
+		document.getElementById("n1").value = "" //input은 value
+		document.getElementById("n2").value = n
+		
+		document.getElementById("h1").innerHTML ="다른 값" //input이 아닌 것은 innerHTML
+		document.getElementById("img").src="test02.jpg" //이미지 속성값 변경
+	}
+</script>
+
+<style type="text/css">
+	#n1{width: 100px;}
+	.img {width: 100px; height: 100px;}
+</style>
+
+</head>
+<body>
+	
+	<img id="img" class="img" src="test.jpg">
+	<h1 id="h1">클릭 전 메세지 입니다.</h1>
+	<input type="text" id="n1"><br>
+	<input type="text" id="n2"><br>
+	<span onclick="test()">클릭</span>
+	
+</body>
+</html>
