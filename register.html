@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function chk() {
+
+		if (id.value == "") {
+			alert("아이디는 필수 사항입니다.")
+			id.focus()
+		}
+		else if (pw.value == "") {
+			alert("비밀번호는 필수 사항입니다.")
+			pw.focus()
+		}
+		else if (pwC.value == "") {
+			alert("비밀번호 확인는 필수 사항입니다.")
+			pwC.focus()
+		}else{
+			fo.submit()
+		}
+		
+	}
+	function pwChk() {
+		if (pw.value == pwC.value) {
+			document.getElementById("lbl").innerHTML = "확인"
+			
+		} 
+		else if (pw.value != pwC.value) {
+			document.getElementById("lbl").innerHTML = "불일치"
+			pw.value =""
+			pwC.value =""
+			pw.focus()
+		}
+	}
+</script>
+
+</head>
+<body>
+
+	<form id="fo" action="success.html">
+		<input id="id" type="text" placeholder="id"><label>(*필수항목)</label> <br> 
+		<input id="pw" type="text" placeholder="pw"><label>(*필수항목)</label> <br> 
+		<input id="pwC" type="text" placeholder="pw check" onchange="pwChk()"> <label id="lbl"></label><br> 
+		<input type="text" placeholder="이름"> <br>
+		<hr>
+		<input type="button" value="등록" onclick="chk()">
+	</form>
+</body>
+</html>

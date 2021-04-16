@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk(){
+		alert("입력되지 않았습니다")
+		fo.submit()
+	}
+	function chk1(){
+		location.href='ex08.html'
+	}
+	
+	
+</script>
+
+</head>
+<body>
+	<form id="fo" action="ex09.html">
+		<input type="text"><br>
+		<input type="button" value="회원가입" onclick="chk()"> <!-- 서브밋이면 무조건 값을 넘겨준다. -->
+		<a href="ex01.html">로그인</a>
+		<input type="button" value="로그인" onclick="location.href='ex01.html'"> 
+		<input type="button" value="저장" onclick="chk()"> 
+	</form>
+</body>
+</html>
